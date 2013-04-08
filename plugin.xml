@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            name="recenter-top-bottom"
+            categoryId="org.eclipse.ui.category.edit"
+            id="e3.commands.recenter">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            commandId="e3.commands.recenter"
+            class="e3.handlers.SampleHandler">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="e3.commands.recenter"
+            contextId="org.eclipse.ui.textEditorScope"
+            sequence="CTRL+L"
+            schemeId="net.nberserk.e3.scheme">
+      </key>
+      <scheme
+            description="Emacs Emulation for Eclipse"
+            id="net.nberserk.e3.scheme"
+            name="Emacs Emulation"
+            parentId="org.eclipse.ui.emacsAcceleratorConfiguration">
+      </scheme>
+   </extension>
+
+</plugin>
